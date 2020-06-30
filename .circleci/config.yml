@@ -70,4 +70,7 @@ workflows:
   version: 2.1
   workflow:
     jobs:
-    - build 
+    - build
+    - heroku/deploy-via-git:
+        requires:
+          - build
