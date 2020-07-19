@@ -15,7 +15,7 @@ public class BackendApplication {
 	}
 
 	@GetMapping("/")
-	public String hello() {
+	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return String.format("Hello Apresentação %s!");
 	}
 
