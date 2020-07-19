@@ -14,9 +14,9 @@ public class BackendApplication {
 		SpringApplication.run(BackendApplication.class, args);
 	}
 
-	@GetMapping("/")
+	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return String.format("Hello Apresentação %s!");
+		return String.format("Hello Apresentação %s!", name);
 	}
 
 }
